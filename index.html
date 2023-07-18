@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        #btn-alert {
+            border: none;
+            border-radius: 5px;
+            padding: 7px 10px;
+            background-color: rgb(37, 116, 226);
+            font-size: 1.3em;
+            color: #fff;
+            cursor: pointer;
+            transition: 0.2s;
+            position: fixed;
+            left: 45%;
+            top: 45%;
+        }
+       
+
+  
+
+
+        #btn-alert:hover {
+            opacity: 0.8;
+        }
+        
+        #btn-alert:focus {
+            outline: rgb(37, 116, 226) solid 3px;
+            outline-offset: 3px;
+        }
+        
+        @media (max-width: 576px) {
+            #btn-alert {
+                left: 38%;
+            }
+        }
+    </style>
+
+    <title>Happy Birthday Bestie</title>
+</head>
+
+<body>
+
+    <button id="btn-alert" onclick="munculinAlert()">Klik Aku!!</button>
+
+    <script>
+        async function munculinAlert() {
+            await Swal.fire('Hai Lora')
+            await Swal.fire('Selamat ulang tahun ya...')
+            await Swal.fire({
+                title: 'Happy Sweet 20th',
+                text: 'Semoga panjang umur, sehat selalu dan dilancarkan semua aktifitasnya',
+                imageUrl: 'asset/cake.jpg',
+                imageWidth: 400,
+                imageHeight: 300,
+                imageAlt: 'Gambar kue ulang tahun',
+            })
+            Swal.fire({
+                title: 'Mazmur 20:4',
+                text: '“Kiranya diberikan-Nya kepadamu apa yang kau kehendaki dan dijadikan-Nya berhasil apa yang kau rancangkan.”',
+                width: 600,
+                padding: '3em',
+                color: '#716add',
+                background: '#fff url(/images/trees.png)',
+                backdrop: `
+                rgba(0,0,123,0.4)
+                url(asset/neko.gif)
+                left top
+                ` 
+            })
+        }
+    </script>
+
+</body>
+
+</html>
